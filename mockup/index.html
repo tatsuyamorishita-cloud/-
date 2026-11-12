@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>森下工務店｜トップページ デザイン案</title>
+  <meta name="description" content="森下工務店 新トップページのデザインモックアップ（画像・文章はすべて仮）">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     ヘッダー（スクロールすると白背景に切り替わる）
+     ============================================================ -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="logo-text">森下工務店<small>MORISHITA CONSTRUCTION</small></span>
+    </a>
+    <nav class="global-nav" aria-label="メインメニュー">
+      <ul>
+        <li><a href="#works">施工実績</a></li>
+        <li><a href="#about">私たちについて</a></li>
+        <li><a href="#service">事業内容</a></li>
+        <li><a href="#news">お知らせ</a></li>
+        <li><a href="#recruit">採用情報</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary btn-sm">お問い合わせ</a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     ① ファーストビュー：フルスクリーン映像＋メッセージ
+     本番では <video> に自社の施工動画（mp4・無音・15〜30秒・5MB前後）を入れる。
+     いまは動画がないため、写真スライドの代わりとなる色面アニメーションを表示。
+     ============================================================ -->
+<section class="hero" aria-label="メインビジュアル">
+  <div class="hero-media">
+    <!-- 本番用：
+    <video autoplay muted loop playsinline poster="images/hero-poster.jpg">
+      <source src="video/hero.mp4" type="video/mp4">
+    </video>
+    -->
+    <div class="hero-slide s1"></div>
+    <div class="hero-slide s2"></div>
+    <div class="hero-slide s3"></div>
+    <span class="ph-label">ここに施工動画（ドローン空撮・現場・竣工シーン）</span>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-en reveal">Building Trust, Shaping the Region.</p>
+    <h1 class="hero-copy reveal">
+      <span>この街に、</span><span>長く愛される建築を。</span>
+    </h1>
+    <p class="hero-lead reveal">住宅から工場、公共施設まで。<br class="sp">地域とともに歩む、森下工務店です。</p>
+  </div>
+  <a href="#news" class="scroll-down" aria-label="下へスクロール"><span>SCROLL</span></a>
+</section>
+
+<!-- ============================================================
+     ② 最新情報（お知らせ＋SNS）
+     WordPressの「投稿」から自動で最新3件を表示する想定。
+     ============================================================ -->
+<section class="section news" id="news">
+  <div class="container news-grid">
+    <div class="section-head reveal">
+      <p class="en">NEWS</p>
+      <h2>お知らせ</h2>
+      <a href="#" class="link-more">一覧を見る</a>
+    </div>
+    <ul class="news-list reveal">
+      <li>
+        <a href="#">
+          <time datetime="2026-11-10">2026.11.10</time>
+          <span class="tag tag-works">施工実績</span>
+          <span class="news-title">〇〇市 △△様邸（木造2階建て）の施工事例を公開しました</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <time datetime="2026-11-01">2026.11.01</time>
+          <span class="tag tag-event">イベント</span>
+          <span class="news-title">12月 完成見学会のご案内（予約制）</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <time datetime="2026-10-20">2026.10.20</time>
+          <span class="tag tag-recruit">採用</span>
+          <span class="news-title">2027年度 新卒・中途採用の募集を開始しました</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     ③ メッセージ（ブランドの想い）
+     ============================================================ -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div class="about-image reveal">
+      <div class="ph ph-tall"><span class="ph-label">代表 or 職人の手元の写真</span></div>
+    </div>
+    <div class="about-text reveal">
+      <p class="en">ABOUT US</p>
+      <h2 class="serif">図面の一本の線に、<br>暮らしと地域の未来を描く。</h2>
+      <p>私たちは〇〇県〇〇市を拠点に、創業以来〇〇年、住まいから工場・公共施設まで幅広い建築に携わってきました。</p>
+      <p>一級建築士による設計と、経験豊かな職人による施工。その両方を自社で担うからこそ、お客様の想いを細部まで形にできます。</p>
+      <a href="#" class="btn btn-outline">森下工務店について</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ④ 施工実績（ジャンル別ギャラリー）
+     WordPressの「カスタム投稿：施工実績」＋「カテゴリ：住宅／工場／公共施設…」で管理する想定。
+     ============================================================ -->
+<section class="section works" id="works">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="en">WORKS</p>
+      <h2>施工実績</h2>
+      <p class="section-lead">ジャンルを選ぶと、該当する実績だけを表示します。</p>
+    </div>
+
+    <div class="works-filter reveal" role="tablist" aria-label="施工実績のジャンル">
+      <button class="is-active" data-filter="all" role="tab" aria-selected="true">すべて</button>
+      <button data-filter="house" role="tab" aria-selected="false">住宅</button>
+      <button data-filter="factory" role="tab" aria-selected="false">工場・倉庫</button>
+      <button data-filter="public" role="tab" aria-selected="false">公共施設</button>
+      <button data-filter="office" role="tab" aria-selected="false">店舗・事務所</button>
+      <button data-filter="reform" role="tab" aria-selected="false">リフォーム</button>
+    </div>
+
+    <div class="works-grid">
+      <a href="#" class="work-card is-large" data-cat="house">
+        <div class="ph ph-a"><span class="ph-label">外観写真</span></div>
+        <div class="work-info"><span class="work-cat">住宅</span><h3>〇〇の家</h3><p>木造2階建て／延床 120㎡</p></div>
+      </a>
+      <a href="#" class="work-card" data-cat="factory">
+        <div class="ph ph-b"><span class="ph-label">外観写真</span></div>
+        <div class="work-info"><span class="work-cat">工場・倉庫</span><h3>△△工業 第二工場</h3><p>S造平屋／延床 2,400㎡</p></div>
+      </a>
+      <a href="#" class="work-card" data-cat="public">
+        <div class="ph ph-c"><span class="ph-label">外観写真</span></div>
+        <div class="work-info"><span class="work-cat">公共施設</span><h3>〇〇町 地域交流センター</h3><p>RC造2階建て</p></div>
+      </a>
+      <a href="#" class="work-card" data-cat="house">
+        <div class="ph ph-d"><span class="ph-label">内観写真</span></div>
+        <div class="work-info"><span class="work-cat">住宅</span><h3>平屋の家</h3><p>木造平屋／延床 95㎡</p></div>
+      </a>
+      <a href="#" class="work-card" data-cat="office">
+        <div class="ph ph-e"><span class="ph-label">外観写真</span></div>
+        <div class="work-info"><span class="work-cat">店舗・事務所</span><h3>□□歯科クリニック</h3><p>木造平屋</p></div>
+      </a>
+      <a href="#" class="work-card" data-cat="reform">
+        <div class="ph ph-f"><span class="ph-label">ビフォー／アフター</span></div>
+        <div class="work-info"><span class="work-cat">リフォーム</span><h3>築40年 古民家再生</h3><p>耐震改修・断熱改修</p></div>
+      </a>
+      <a href="#" class="work-card" data-cat="public">
+        <div class="ph ph-b"><span class="ph-label">外観写真</span></div>
+        <div class="work-info"><span class="work-cat">公共施設</span><h3>〇〇小学校 体育館改修</h3><p>S造／耐震補強</p></div>
+      </a>
+      <a href="#" class="work-card" data-cat="factory">
+        <div class="ph ph-a"><span class="ph-label">外観写真</span></div>
+        <div class="work-info"><span class="work-cat">工場・倉庫</span><h3>◇◇物流 倉庫</h3><p>S造平屋／延床 1,800㎡</p></div>
+      </a>
+    </div>
+
+    <div class="center reveal">
+      <a href="#" class="btn btn-primary">施工実績をもっと見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ⑤ 数字で見る森下工務店（信用の裏付け）
+     ============================================================ -->
+<section class="numbers">
+  <div class="container numbers-grid">
+    <div class="num reveal"><span class="num-value" data-count="50">0</span><span class="num-unit">年</span><p>創業からの歩み</p></div>
+    <div class="num reveal"><span class="num-value" data-count="800">0</span><span class="num-unit">棟+</span><p>累計施工実績</p></div>
+    <div class="num reveal"><span class="num-value" data-count="5">0</span><span class="num-unit">名</span><p>一級建築士</p></div>
+    <div class="num reveal"><span class="num-value" data-count="30">0</span><span class="num-unit">名</span><p>自社の職人・技術者</p></div>
+  </div>
+  <p class="container numbers-note">※数値はすべて仮です。実数に差し替えてください。</p>
+</section>
+
+<!-- ============================================================
+     ⑥ 事業内容（3本柱）
+     ============================================================ -->
+<section class="section service" id="service">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="en">SERVICE</p>
+      <h2>事業内容</h2>
+    </div>
+    <div class="service-grid">
+      <article class="service-card reveal">
+        <div class="ph ph-d"><span class="ph-label">住宅の写真</span></div>
+        <div class="service-body">
+          <p class="service-no">01</p>
+          <h3>住宅</h3>
+          <p>注文住宅・平屋・二世帯住宅。設計から施工、引き渡し後の点検まで一貫して担います。</p>
+          <a href="#" class="link-more">詳しく見る</a>
+        </div>
+      </article>
+      <article class="service-card reveal">
+        <div class="ph ph-b"><span class="ph-label">工場・倉庫の写真</span></div>
+        <div class="service-body">
+          <p class="service-no">02</p>
+          <h3>非住宅（工場・倉庫・店舗）</h3>
+          <p>生産性と安全性を両立する工場・倉庫、事業を支える店舗・事務所を計画・施工します。</p>
+          <a href="#" class="link-more">詳しく見る</a>
+        </div>
+      </article>
+      <article class="service-card reveal">
+        <div class="ph ph-c"><span class="ph-label">公共施設の写真</span></div>
+        <div class="service-body">
+          <p class="service-no">03</p>
+          <h3>公共施設・リフォーム</h3>
+          <p>学校・公民館などの公共工事、耐震・断熱改修、古民家再生にも対応します。</p>
+          <a href="#" class="link-more">詳しく見る</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ⑦ SNS連携（Instagramの最新投稿を表示）
+     本番ではプラグイン（例：Smash Balloon等）で自動表示する想定。
+     ============================================================ -->
+<section class="section sns">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="en">INSTAGRAM</p>
+      <h2>現場の「いま」を発信中</h2>
+      <p class="section-lead">上棟・完成見学会・職人の手しごとなど、日々の様子をお届けしています。</p>
+    </div>
+    <div class="sns-grid reveal">
+      <a href="#" class="ph ph-a"></a><a href="#" class="ph ph-d"></a><a href="#" class="ph ph-c"></a>
+      <a href="#" class="ph ph-f"></a><a href="#" class="ph ph-b"></a><a href="#" class="ph ph-e"></a>
+    </div>
+    <div class="center reveal">
+      <a href="#" class="btn btn-outline">Instagramをフォロー</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ⑧ 採用情報
+     ============================================================ -->
+<section class="recruit" id="recruit">
+  <div class="recruit-bg ph ph-f"><span class="ph-label">社員の集合写真・現場で働く姿</span></div>
+  <div class="recruit-overlay"></div>
+  <div class="container recruit-content reveal">
+    <p class="en">RECRUIT</p>
+    <h2 class="serif">地図に残る仕事を、<br>一緒に。</h2>
+    <p>施工管理・設計・大工職人を募集しています。<br>未経験からでも、先輩社員と技術資料でしっかり学べる環境があります。</p>
+    <div class="btn-row">
+      <a href="#" class="btn btn-white">採用情報を見る</a>
+      <a href="#" class="btn btn-ghost">社員インタビュー</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ⑨ お問い合わせ（最終ゴール）
+     ============================================================ -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="en">CONTACT</p>
+      <h2>まずはお気軽にご相談ください</h2>
+      <p class="section-lead">家づくり、工場・店舗の建設、リフォーム、どんなことでも。</p>
+    </div>
+    <div class="contact-grid reveal">
+      <a href="#" class="contact-card">
+        <span class="contact-icon" aria-hidden="true">✉</span>
+        <h3>メールで相談する</h3>
+        <p>24時間受付・2営業日以内にご返信</p>
+      </a>
+      <a href="tel:000-000-0000" class="contact-card">
+        <span class="contact-icon" aria-hidden="true">☎</span>
+        <h3>000-000-0000</h3>
+        <p>受付 8:00〜17:00（日・祝休み）</p>
+      </a>
+      <a href="#" class="contact-card">
+        <span class="contact-icon" aria-hidden="true">◇</span>
+        <h3>見学会・相談会に予約</h3>
+        <p>実際の建物を見て、触れて、確かめる</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     フッター（関係者向けページへの入口もここに置く）
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <p class="logo-text">森下工務店<small>MORISHITA CONSTRUCTION</small></p>
+      <p>〒000-0000 〇〇県〇〇市〇〇町0-0-0<br>TEL 000-000-0000 ／ FAX 000-000-0000</p>
+      <p class="license">建設業許可 〇〇県知事許可（般-00）第00000号<br>一級建築士事務所 〇〇県知事登録 第00000号</p>
+    </div>
+    <nav class="footer-nav" aria-label="フッターメニュー">
+      <ul>
+        <li><a href="#works">施工実績</a></li>
+        <li><a href="#about">私たちについて</a></li>
+        <li><a href="#service">事業内容</a></li>
+        <li><a href="#news">お知らせ</a></li>
+        <li><a href="#recruit">採用情報</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+      </ul>
+    </nav>
+    <div class="footer-portal">
+      <p class="portal-title">関係者の方へ（ログインが必要です）</p>
+      <a href="#" class="portal-link">施主さま専用ページ</a>
+      <a href="#" class="portal-link">協力業者さま専用ページ</a>
+      <a href="#" class="portal-link">社員ポータル・技術資料</a>
+    </div>
+  </div>
+  <p class="copyright">© Morishita Construction</p>
+</footer>
+
+<!-- スマホ用：画面下に固定する問い合わせボタン -->
+<a href="#contact" class="sp-fixed-cta">お問い合わせ・ご相談</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
